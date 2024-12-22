@@ -6,38 +6,37 @@ import { FOOTER_LINKS, FOOTER_SOCIAL_LINKS } from "@/utils/constants"
 
 const Footer = () => {
   return (
-    <footer className="bg-[#8890C233] h-[464px] py-[49px] relative self-stretch">
-      <div className="mx-[80px]">
-        <div className="flex flex-row">
-          <div className="flex flex-1">
-            {/* Logo Section */}
-            <div className="flex items-center absolute top-[48px]">
-              <div className="text-primary uppercase font-[600] text-[40px] leading-[40px] flex font-clash items-center">
-                <Image
-                  src={Logo}
-                  height={70}
-                  width={70}
-                  alt="LetUsHelp Logo"
-                  className="mr-[16px]"
-                />
-                letushelp
-              </div>
+    <footer className="bg-[#8890C233] min-h-[464px] py-8 md:py-12 relative w-full overflow-hidden">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8">
+        <div className="flex flex-col space-y-8 md:space-y-0 md:flex-row md:justify-between">
+          {/* Logo Section */}
+          <div className="flex items-center justify-center md:justify-start">
+            <div className="text-primary uppercase font-semibold text-2xl sm:text-3xl md:text-4xl leading-tight flex items-center font-clash">
+              <Image
+                src={Logo}
+                height={70}
+                width={70}
+                alt="LetUsHelp Logo"
+                className="mr-3 h-10 w-10 sm:h-12 sm:w-12 md:h-[70px] md:w-[70px]"
+              />
+              letushelp
             </div>
           </div>
-          <div className="flex flex-col flex-1">
-            {/* Links Section */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+          {/* Links Section */}
+          <div className="flex-grow md:ml-8 max-w-3xl">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
               {FOOTER_LINKS.map((section) => (
-                <div key={section.title} className="">
-                  <h3 className="text-[20px] font-[600] text-primary mb-[26px]">
+                <div key={section.title}>
+                  <h3 className="text-lg font-semibold text-primary mb-4 text-center md:text-left">
                     {section.title}
                   </h3>
-                  <ul className="space-y-[24px]">
+                  <ul className="space-y-3 text-center md:text-left">
                     {section.links.map((link) => (
-                      <li key={link.name} className="">
+                      <li key={link.name}>
                         <a
                           href={link.href}
-                          className="text-primary text-[16px]"
+                          className="text-primary text-sm hover:underline"
                         >
                           {link.name}
                         </a>
@@ -49,11 +48,11 @@ const Footer = () => {
             </div>
 
             {/* Social Media and Copyright */}
-            <div className="flex items-center mt-32 gap-[300px]">
-              <p className="text-primary leading-[14px] font-[400] text-[14px]">
+            <div className="flex flex-col items-center md:flex-row md:justify-between mt-8 space-y-4 md:space-y-0">
+              <p className="text-primary text-xs text-center md:text-left">
                 ©2024 LetUSHelp. All rights reserved
               </p>
-              <div className="flex space-x-[24px] items-center">
+              <div className="flex space-x-4 items-center">
                 {FOOTER_SOCIAL_LINKS.map((link) => (
                   <a
                     key={link.name}
@@ -65,6 +64,7 @@ const Footer = () => {
                       alt={link.name}
                       height={24}
                       width={24}
+                      className="h-6 w-6"
                     />
                   </a>
                 ))}
@@ -78,7 +78,7 @@ const Footer = () => {
       <Image
         src={FooterFlowersImage}
         alt="Footer Flowers Image"
-        className="absolute bottom-0 left-0 h-[286px] w-[442px]"
+        className="absolute bottom-0 left-0 h-auto w-full max-w-[300px] md:max-w-[442px] pointer-events-none"
       />
     </footer>
   )
