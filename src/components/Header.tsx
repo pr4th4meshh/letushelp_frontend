@@ -58,7 +58,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-[#061257] mt-2 rounded-b-2xl shadow-lg">
+        <div className="lg:hidden absolute transition-all duration-300 top-full left-0 right-0 bg-[#061257] mt-2 rounded-b-2xl shadow-lg">
           <nav className="flex flex-col p-4">
             {NAV_ITEMS.map((item, index) => (
               <a
@@ -79,7 +79,7 @@ const Header = () => {
             ))}
             <PrimaryButton
               title="Sign In"
-              className="text-[18px] px-[40px] h-full bg-[#3A88FF]"
+              className="text-[18px] px-[40px] bg-[#3A88FF]"
               onClick={() => setIsMenuOpen(false)}
             />
           </nav>
