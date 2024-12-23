@@ -1,3 +1,11 @@
+import carouselImage0 from "../../public/CarouselImage0.svg"
+import carouselImage1 from "../../public/CarouselImage1.svg"
+import carouselImage2 from "../../public/CarouselImage2.svg"
+// import carouselImage3 from "../../public/CarouselImage3.svg"
+import carouselImage4 from "../../public/CarouselImage4.svg"
+import carouselImage5 from "../../public/CarouselImage5.svg"
+import carouselImage6 from "../../public/CarouselImage6.svg"
+
 export const NAV_ITEMS = [
   { name: "Explore Opportunity", href: "#" },
   { name: "Post Opportunity", href: "#" },
@@ -39,4 +47,17 @@ export const FOOTER_SOCIAL_LINKS = [
   { name: "Twitter", image: "/twitter.svg", href: "#" },
   { name: "Youtube", image: "/youtube.svg", href: "#" },
   { name: "Linkedin", image: "/linkedin.svg", href: "#" },
+]
+
+export const RTL_IMAGES = [
+  { src: carouselImage0, alt: "Carousel Image 0" },
+  { src: carouselImage1, alt: "Carousel Image 1" },
+  { src: carouselImage2, alt: "Carousel Image 2" },
+  // { src: carouselImage3, alt: "Carousel Image 3" },
+]
+
+export const LTR_IMAGES = [
+  { src: carouselImage4, alt: "Carousel Image 4" },
+  { src: carouselImage5, alt: "Carousel Image 5" },
+  { src: carouselImage6, alt: "Carousel Image 6" },
 ]
