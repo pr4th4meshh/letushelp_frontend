@@ -48,11 +48,11 @@ const Footer = () => {
             </div>
 
             {/* Social Media and Copyright */}
-            <div className="flex flex-col items-center md:flex-row md:justify-between mt-8 space-y-4 md:space-y-0">
+            <div className="flex flex-col absolute bottom-[44px] items-center md:flex-row md:justify-between mt-8 space-y-4 md:space-y-0">
               <p className="text-primary text-xs text-center md:text-left">
                 ©2024 LetUSHelp. All rights reserved
               </p>
-              <div className="flex space-x-4 items-center">
+              <div className="flex relative left-[300px] space-x-4 items-center">
                 {FOOTER_SOCIAL_LINKS.map((link) => (
                   <a
                     key={link.name}
