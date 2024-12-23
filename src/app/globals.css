@@ -18,12 +18,17 @@
 }
 
 * {
-  font-family: Instrument Sans ,sans-serif;
+  font-family: Instrument Sans, sans-serif;
   font-weight: 400;
 }
 
 .volunteering-opportunities-box-shadow {
   box-shadow: 0px 2px 10px 0px rgba(6, 18, 87, 0.25);
+}
+
+.hero-button-shadow {
+  box-shadow: 0px 2px 4px 0px rgba(136, 144, 194, 0.2),
+    0px 5px 15px 0px rgba(37, 44, 97, 0.15);
 }
 
 @layer base {
