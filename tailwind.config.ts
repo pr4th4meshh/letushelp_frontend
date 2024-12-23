@@ -56,7 +56,11 @@ export default {
 		fontFamily: {
 			clash: ['Clash Grotesk', 'sans-serif'],
 			clashBold: ['Clash Grotesk Semi_Bold', 'sans-serif'],
-		}
+		},
+		animation: {
+			'scroll-ltr': 'scroll-ltr linear infinite',
+			'scroll-rtl': 'scroll-rtl linear infinite',
+		  },
   	}
   },
   plugins: [require("tailwindcss-animate")],
