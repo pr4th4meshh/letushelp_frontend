@@ -28,7 +28,7 @@ const VolunteeringOpportunities = ({ images }: IVolunteeringOpportunities) => {
       ))}
 
       {/* Number of opportunities */}
-      <span className="text-[#252525] text-[18px] font-[500] leading-normal ml-[-60px]">
+      <span className="text-[#252525] text-[14px] md:text-[18px] font-[500] leading-normal ml-[-60px]">
         3,500+ Volunteering Opportunitites
       </span>
     </div>
