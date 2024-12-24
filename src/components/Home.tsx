@@ -6,6 +6,7 @@ import Hero from "./Hero"
 import ImagesCarousel from "./ImagesCarousel"
 import QuotesComponent from "./Quotes"
 import Statistics from "./Statistics"
+import PostTask from "./PostTask"
 
 const LandingPage = () => {
   return (
@@ -15,6 +16,7 @@ const LandingPage = () => {
       <ImagesCarousel />
       <QuotesComponent />
       <Statistics />
+      <PostTask />
       <Footer />
     </div>
   )
