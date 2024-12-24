@@ -5,7 +5,7 @@ import { LTR_IMAGES, RTL_IMAGES } from "@/utils/constants"
 
 const ImagesCarousel: React.FC = () => {
   return (
-    <div className="py-[74px] space-y-8">
+    <div className="mt-[74px] mb-[100px] space-y-[32px]">
       <InfiniteCarousel direction="rtl" speed={200}>
         {RTL_IMAGES.concat(RTL_IMAGES).map((image, index) => (
           <div

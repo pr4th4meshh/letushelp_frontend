@@ -9,7 +9,7 @@ import SecondaryButton from "./SecondaryButton"
 
 const Hero = () => {
   return (
-    <div className="flex flex-col h-screen relative z-0  md:px-0 px-[10px]">
+    <div className="flex flex-col h-auto relative z-0 mb-[74px] md:px-0 px-[10px]">
       {/* Volunteering Opportunities Card */}
       <VolunteeringOpportunities
         images={[
