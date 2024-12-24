@@ -5,12 +5,12 @@ import { LTR_IMAGES, RTL_IMAGES } from "@/utils/constants"
 
 const ImagesCarousel: React.FC = () => {
   return (
-    <div className="mt-[74px] mb-[100px] space-y-[32px]">
+    <div className="mt-[74px] mb-[100px] space-y-[16px] sm:space-y-[18px] md:space-y-[32px]">
       <InfiniteCarousel direction="rtl" speed={200}>
         {RTL_IMAGES.concat(RTL_IMAGES).map((image, index) => (
           <div
             key={index}
-            className="flex justify-center items-center px-[24px]"
+            className="flex justify-center items-center px-0 sm:px-[18px] md:px-[24px]"
           >
             <Image
               src={image.src}
@@ -28,7 +28,7 @@ const ImagesCarousel: React.FC = () => {
         {LTR_IMAGES.concat(LTR_IMAGES).map((image, index) => (
           <div
             key={index}
-            className="flex justify-center items-center px-[24px]"
+            className="flex justify-center items-center px-0 sm:px-[18px] md:px-[24px]"
           >
             <Image
               src={image.src}

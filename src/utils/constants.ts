@@ -72,3 +72,26 @@ export const STATISTICS_DATA = [
   { id: 3, title: "Opportunities", value: "300k+" },
   { id: 4, title: "Hours Volunteered", value: "1450k+" },
 ]
+
+// STEPS data
+export const STEPS = [
+  {
+    number: "1",
+    title: "Connect",
+    description:
+      "Build bridges and discover opportunities to unite for a cause.",
+    align: "right",
+  },
+  {
+    number: "2",
+    title: "Volunteer",
+    description: "Lend a helping hand and make a real difference today.",
+    align: "left",
+  },
+  {
+    number: "3",
+    title: "Impact",
+    description: "Transform lives and leave a lasting legacy of kindness.",
+    align: "right",
+  },
+]

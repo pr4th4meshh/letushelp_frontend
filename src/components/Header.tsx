@@ -14,14 +14,14 @@ const Header = () => {
         {/* Logo div  */}
         <div className="flex items-center">
           <Image src={Logo} height={40} width={40} alt="LetUsHelp Logo" className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-[70px] lg:w-[70px]" />
-          <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl ml-2 sm:ml-3 md:ml-4 lg:ml-[12px] leading-tight tracking-wider font-clashBold">
+          <h1 className="text-[18px] sm:text-lg md:text-xl lg:text-2xl ml-2 sm:ml-3 md:ml-4 lg:ml-[12px] leading-tight tracking-wider font-clashBold">
             Let Us Help
           </h1>
         </div>
 
         {/* Hamburger Menu for Mobile */}
         <button
-          className="lg:hidden text-white focus:outline-none"
+          className="lg:hidden text-white focus:outline-none pr-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
