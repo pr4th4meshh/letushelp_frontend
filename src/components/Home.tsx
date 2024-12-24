@@ -5,6 +5,7 @@ import Header from "./Header"
 import Hero from "./Hero"
 import ImagesCarousel from "./ImagesCarousel"
 import QuotesComponent from "./Quotes"
+import Statistics from "./Statistics"
 
 const LandingPage = () => {
   return (
@@ -13,6 +14,7 @@ const LandingPage = () => {
       <Hero />
       <ImagesCarousel />
       <QuotesComponent />
+      <Statistics />
       <Footer />
     </div>
   )
