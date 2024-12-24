@@ -6,7 +6,7 @@ import { splitDescription } from "@/utils/helpers"
 
 const ThePath = () => {
   return (
-    <section className="relative mx-0 mb-[250px] md:px-0 px-4">
+    <section className="relative mx-0 mb-[180px] sm:mb-[250px] md:px-0 px-4">
       {/* Left Floral Decoration */}
       <Image
         src={FloralIllustration}

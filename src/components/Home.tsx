@@ -8,6 +8,7 @@ import QuotesComponent from "./Quotes"
 import Statistics from "./Statistics"
 import PostTask from "./PostTask"
 import ThePath from "./ThePath"
+import SearchOpportunity from "./SearchOpportunity"
 
 const LandingPage = () => {
   return (
@@ -19,6 +20,7 @@ const LandingPage = () => {
       <Statistics />
       <PostTask />
       <ThePath />
+      <SearchOpportunity />
       <Footer />
     </div>
   )
