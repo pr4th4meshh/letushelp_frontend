@@ -79,19 +79,107 @@ export const STEPS = [
     number: "1",
     title: "Connect",
     description:
-      "Build bridges and discover opportunities to unite for a cause.",
+      "Build bridges and discover\n opportunities to unite for a cause.",
     align: "right",
   },
   {
     number: "2",
     title: "Volunteer",
-    description: "Lend a helping hand and make a real difference today.",
+    description: "Lend a helping hand and\n make a real difference today.",
     align: "left",
   },
   {
     number: "3",
     title: "Impact",
-    description: "Transform lives and leave a lasting legacy of kindness.",
+    description: "Transform lives and leave a\n lasting legacy of kindness.",
     align: "right",
+  },
+]
+
+// Popular events data
+export const POPULAR_EVENTS_CARD_DATA = [
+  {
+    id: 1,
+    src: "/popular-image-1.svg",
+    category: "Food Donation",
+    categoryIcon: "/search-icon.svg",
+    viewers: 100,
+    location: "Manhattan",
+    title: "Food Donation Event",
+    description:
+      "Spend 2 hours a week mentoring underprivileged children and help them achieve their dreams.",
+  },
+  {
+    id: 2,
+    src: "/popular-image-1.svg",
+    category: "Food Donation",
+    categoryIcon: "/search-icon.svg",
+    viewers: 100,
+    location: "Manhattan",
+    title: "Food Donation Event",
+    description:
+      "Spend 2 hours a week mentoring underprivileged children and help them achieve their dreams.",
+  },
+  {
+    id: 3,
+    src: "/popular-image-1.svg",
+    category: "Food Donation",
+    categoryIcon: "/search-icon.svg",
+    viewers: 100,
+    location: "Manhattan",
+    title: "Food Donation Event",
+    description:
+      "Spend 2 hours a week mentoring underprivileged children and help them achieve their dreams.",
+  },
+  {
+    id: 4,
+    src: "/popular-image-1.svg",
+    category: "Food Donation",
+    categoryIcon: "/search-icon.svg",
+    viewers: 100,
+    location: "Manhattan",
+    title: "Food Donation Event",
+    description:
+      "Spend 2 hours a week mentoring underprivileged children and help them achieve their dreams.",
+  }
+]
+
+// TESTIMONIALS_DATA
+export const TESTIMONIALS_DATA = [
+  {
+    id: 1,
+    image: "/testimonial-image-1.svg",
+    name: "Rachel Smith",
+    title: "Environmental Activist",
+    rating: 5,
+    feedback:
+      "From tree plantation drives to community cleanups, I’ve been part of multiple projects, and each one taught me something new. It feels great to know that I’m contributing to a sustainable future.",
+  },
+  {
+    id: 2,
+    image: "/testimonial-image-2.svg",
+    name: "Chris Adams",
+    title: "Environmental Activist",
+    rating: 3.5,
+    feedback:
+      "I joined the Clean Beaches Initiative, and it was amazing to see how a small group of people could make such a huge difference. I’ve learned so much about environmental conservation and met some incredible, like-minded people.",
+  },
+  {
+    id: 3,
+    image: "/testimonial-image-1.svg",
+    name: "Michelle Reed",
+    title: "Volunteer",
+    rating: 5,
+    feedback:
+      "Volunteering has been an incredibly rewarding experience. Working together as a team to make a real difference in our community is inspiring.",
+  },
+  {
+    id: 4,
+    image: "/testimonial-image-2.svg",
+    name: "Junaid Shaikh",
+    title: "Volunteer",
+    rating: 5,
+    feedback:
+      "Volunteering has been an incredibly rewarding experience. Working together as a team to make a real difference in our community is inspiring.",
   },
 ]
