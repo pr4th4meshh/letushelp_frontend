@@ -74,6 +74,7 @@ const Popular = () => {
         </CarouselNext>
       </Carousel>
 
+      {/* Dots / Carousel control */}
       <div className="flex justify-center items-center h-[24px] w-auto px-3 mt-[26px] shrink-0 space-x-[8px] bg-gray-200 rounded-full">
         {Array.from({ length: count }).map((_, index) => (
           <button
@@ -82,7 +83,7 @@ const Popular = () => {
             className={`h-[8px] w-[8px] rounded-full ${
               current === index ? "bg-black" : "bg-gray-300"
             }`}
-          ></button>
+          />
         ))}
       </div>
     </div>

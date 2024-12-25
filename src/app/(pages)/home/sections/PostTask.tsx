@@ -37,12 +37,12 @@ const PostTask = () => {
           <ul className="mt-[45px] space-y-[24px] text-[18px] text-primary">
             {STEPS.map((step, index) => (
               <div key={index}>
-                <li className="flex items-center text-primary text-[18px] leading-[18px] font-[500]">
+                <div className="flex items-center text-primary text-[18px] leading-[18px] font-[500]">
                   <span className="p-[10px] h-[50px] w-[50px] text-[#2C65FC] leading-[16px] text-[24px] font-[500] bg-[#CEE0FE] rounded-full mr-[12px] shrink-0 flex items-center justify-center">
                     {step.number}
                   </span>
                   {step.title}
-                </li>
+                </div>
               </div>
             ))}
           </ul>
