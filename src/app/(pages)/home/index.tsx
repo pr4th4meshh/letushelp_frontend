@@ -11,6 +11,7 @@ import ThePath from "@/app/(pages)/home/sections/ThePath"
 import SearchOpportunity from "@/app/(pages)/home/sections/SearchOpportunity"
 import Popular from "@/app/(pages)/home/sections/Popular"
 import Testimonials from "../../../components/Testimonials"
+import NewsLetter from "@/components/NewsLetter"
 
 const LandingPage = () => {
   return (
@@ -25,6 +26,7 @@ const LandingPage = () => {
       <SearchOpportunity />
       <Popular />
       <Testimonials />
+      <NewsLetter />
       <Footer />
     </div>
   )
