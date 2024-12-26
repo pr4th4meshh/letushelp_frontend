@@ -20,7 +20,7 @@ export default {
   				DEFAULT: 'hsl(var(--popover))',
   				foreground: 'hsl(var(--popover-foreground))'
   			},
-  			primary: "#061257",
+  			primary: '#061257',
   			secondary: {
   				DEFAULT: 'hsl(var(--secondary))',
   				foreground: 'hsl(var(--secondary-foreground))'
@@ -46,6 +46,16 @@ export default {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
+  			},
+  			sidebar: {
+  				DEFAULT: 'hsl(var(--sidebar-background))',
+  				foreground: 'hsl(var(--sidebar-foreground))',
+  				primary: 'hsl(var(--sidebar-primary))',
+  				'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
+  				accent: 'hsl(var(--sidebar-accent))',
+  				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
+  				border: 'hsl(var(--sidebar-border))',
+  				ring: 'hsl(var(--sidebar-ring))'
   			}
   		},
   		borderRadius: {
@@ -53,14 +63,20 @@ export default {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
-		fontFamily: {
-			clash: ['Clash Grotesk', 'sans-serif'],
-			clashBold: ['Clash Grotesk Semi_Bold', 'sans-serif'],
-		},
-		animation: {
-			'scroll-ltr': 'scroll-ltr linear infinite',
-			'scroll-rtl': 'scroll-rtl linear infinite',
-		  },
+  		fontFamily: {
+  			clash: [
+  				'Clash Grotesk',
+  				'sans-serif'
+  			],
+  			clashBold: [
+  				'Clash Grotesk Semi_Bold',
+  				'sans-serif'
+  			]
+  		},
+  		animation: {
+  			'scroll-ltr': 'scroll-ltr linear infinite',
+  			'scroll-rtl': 'scroll-rtl linear infinite'
+  		}
   	}
   },
   plugins: [require("tailwindcss-animate")],
