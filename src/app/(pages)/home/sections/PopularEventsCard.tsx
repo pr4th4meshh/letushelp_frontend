@@ -52,7 +52,7 @@ const PopularEventsCard = ({
   return (
     <div
       className={cn(
-        "flex flex-col items-center w-[316px] h-auto px-[8px] pt-[8px] pb-[18px] rounded-[24px] bg-[#F2F4F6] border-2px border-white popular-events-card-shadow gap-[24px] mb-3",
+        "flex flex-col items-center w-[316px] h-auto px-[8px] pt-[8px] pb-[18px] rounded-[24px] bg-[#F2F4F6] border-2px border-white shadow-[0px_2px_4px_0px_rgba(136,_144,_194,_0.2),_0px_5px_15px_0px_rgba(37,_44,_97,_0.15)] gap-[24px] mb-3",
         className
       )}
     >

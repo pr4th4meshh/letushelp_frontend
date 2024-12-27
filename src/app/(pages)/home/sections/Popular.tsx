@@ -81,7 +81,7 @@ const Popular = () => {
             key={index}
             onClick={() => handleDotClick(index)}
             className={`h-[8px] w-[8px] rounded-full ${
-              current === index ? "bg-black" : "bg-gray-300"
+              current === index ? "bg-black" : "bg-gray-400"
             }`}
           />
         ))}
