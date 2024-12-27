@@ -46,11 +46,11 @@ const Hero = () => {
       <div className="flex flex-row justify-center z-50 gap-[21px] pt-[32px]">
         <SecondaryButton
           title="Find Opportunities"
-          className="text-[14px] font-[600] leading-[100%] hero-button-shadow bg-[#0984E3] hover:bg-[#2169a0] text-white transition-all duration-300 transform hover:translate-y-[-4px]"
+          className="text-[14px] font-[600] leading-[100%] shadow-[0px_2px_4px_0px_rgba(136,_144,_194,_0.2),_0px_5px_15px_0px_rgba(37,_44,_97,_0.15)] bg-[#0984E3] hover:bg-[#2169a0] text-white transition-all duration-300 transform hover:translate-y-[-4px]"
         />
         <SecondaryButton
           title="List Opportunities"
-          className="text-[14px] font-[600] leading-[100%] hero-button-shadow transition-all duration-300 transform hover:translate-y-[-4px] hover:bg-[#2169a0] hover:text-white"
+          className="text-[14px] font-[600] leading-[100%] shadow-[0px_2px_4px_0px_rgba(136,_144,_194,_0.2),_0px_5px_15px_0px_rgba(37,_44,_97,_0.15)] transition-all duration-300 transform hover:translate-y-[-4px] hover:bg-[#2169a0] hover:text-white"
         />
       </div>
     </div>
