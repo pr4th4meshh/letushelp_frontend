@@ -1,4 +1,6 @@
+"use client"
 import { AppSidebar } from "@/components/app-sidebar"
+import Loading from "@/components/Loading"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -13,8 +15,18 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
+import { useProtectedRoute } from "@/hooks/useProtectedRoute"
 
 export default function Page() {
+  const { isAuthenticated, isLoading } = useProtectedRoute()
+
+  if (isLoading) {
+    return <Loading />
+  }
+
+  if (!isAuthenticated) {
+    return null
+  }
   return (
     <SidebarProvider>
       <AppSidebar />
