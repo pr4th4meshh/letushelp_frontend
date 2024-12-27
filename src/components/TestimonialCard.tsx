@@ -47,7 +47,7 @@ const TestimonialCard = ({
           {personName}
         </h3>
         {/* Testimonial Card Person Title */}
-        <div className="flex px-[10px] py-[5px] text-[12px] text-gray-700 bg-[#F2F4F6] border-[3px] border-white rounded-[100px] w-fit person-testimonial-card-shadow mb-[14px] md:mb-[28px]">
+        <div className="flex px-[10px] py-[5px] text-[12px] text-gray-700 bg-[#F2F4F6] border-[3px] border-white rounded-[100px] w-fit shadow-[0px_0px_10px_0px_#00000040] mb-[14px] md:mb-[28px]">
           {personTitle}
         </div>
         {/* Testimonial Card Rating */}

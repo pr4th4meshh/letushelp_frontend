@@ -7,7 +7,7 @@ interface IVolunteeringOpportunities {
 
 const VolunteeringOpportunities = ({ images }: IVolunteeringOpportunities) => {
   return (
-    <div className="flex flex-row w-auto justify-center items-center mt-[220px] mb-[60px] py-[10px] px-[20px] rounded-[100px] gap-[12px] volunteering-opportunities-box-shadow max-w-screen-xl mx-auto">
+    <div className="flex flex-row w-auto justify-center items-center mt-[220px] mb-[60px] py-[10px] px-[20px] rounded-[100px] gap-[12px] shadow-[0px_0px_10px_0px_#00000040] max-w-screen-xl mx-auto">
       {/* Avatar images coming as props from hero component */}
       {images.map((image, index) => (
         <div key={index} className="">

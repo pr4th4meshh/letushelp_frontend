@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss"
+const {fontFamily} = require("tailwindcss/defaultTheme")
 
 export default {
   darkMode: ["class"],
@@ -65,8 +66,9 @@ export default {
       },
       fontFamily: {
         clash: ["Clash Grotesk", "sans-serif"],
-        clashBold: ["Clash Grotesk Semi_Bold", "sans-serif"],
-        instrument: ["Instrument Sans", "sans-serif"],
+        // clashBold: ["Clash Grotesk Semi_Bold", "sans-serif"],
+        clashBold: ["var(--font-clash-grotesk-semibold)", ...fontFamily.sans],
+        instrument: ["var(--font-instrument-sans)", ...fontFamily.sans],
       },
       animation: {
         "scroll-ltr": "scroll-ltr linear infinite",
