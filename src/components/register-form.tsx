@@ -13,31 +13,46 @@ import { Label } from "@/components/ui/label"
 import Link from "next/link"
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { signInWithEmailAndPassword } from "firebase/auth"
+import { createUserWithEmailAndPassword } from "firebase/auth"
 import { auth } from "@/lib/firebase"
 import { useAuth } from "@/contexts/AuthContext"
-import { setCookie } from "cookies-next"
+import { doc, getFirestore, setDoc } from "firebase/firestore"
 
-export function LoginForm({
+export function RegisterForm({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<"div">) {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-  const [error, setError] = useState("") 
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
+  const [error, setError] = useState("")
   const router = useRouter()
   const { setToken } = useAuth()
 
-  const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+
     try {
-      const userCredential = await signInWithEmailAndPassword(auth, email, password)
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      )
+
+      const user = userCredential.user
+      const db = getFirestore()
+      await setDoc(doc(db, "users", user.uid), {
+        firstName,
+        lastName,
+        email: user.email,
+      })
+
       const token = await userCredential.user?.getIdToken()
-      setToken(token);
-      setCookie('luh_token', token, { maxAge: 30 * 24 * 60 * 60 }); // 30 days
-      router.push("/dashboard");
+      setToken(token)
+      router.push("/dashboard")
     } catch (error) {
-      setError("Failed to login")
+      setError("Failed to create account")
       console.log(error)
     }
   }
@@ -51,7 +66,7 @@ export function LoginForm({
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleLogin}>
+          <form onSubmit={handleSubmit}>
             <div className="grid gap-6">
               <div className="flex flex-col gap-4">
                 <Button variant="outline" className="w-full">
@@ -91,6 +106,28 @@ export function LoginForm({
                   />
                 </div>
                 <div className="grid gap-2">
+                  <Label htmlFor="firstName">First Name</Label>
+                  <Input
+                    id="firstName"
+                    type="text"
+                    placeholder="Your first name.."
+                    required
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                  />
+                </div>
+                <div className="grid gap-2">
+                  <Label htmlFor="lastName">Last Name</Label>
+                  <Input
+                    id="lastName"
+                    type="text"
+                    placeholder="Your last name.."
+                    required
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                  />
+                </div>
+                <div className="grid gap-2">
                   <div className="flex items-center">
                     <Label htmlFor="password">Password</Label>
                     <a
@@ -100,10 +137,13 @@ export function LoginForm({
                       Forgot your password?
                     </a>
                   </div>
-                  <Input id="password" type="password" required 
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Enter your password"
+                  <Input
+                    id="password"
+                    type="password"
+                    required
+                    value={password}
+                    placeholder="Enter your password"
+                    onChange={(e) => setPassword(e.target.value)}
                   />
                 </div>
                 <Button type="submit" className="w-full text-white">
@@ -111,14 +151,16 @@ export function LoginForm({
                 </Button>
               </div>
               <div className="text-center text-sm">
-                Don&apos;t have an account?{" "}
-                <Link href="/register" className="underline underline-offset-4">
-                  Sign up
+                Already have an account?{" "}
+                <Link href="/login" className="underline underline-offset-4">
+                  Login
                 </Link>
               </div>
             </div>
           </form>
-          {error && <p className="mt-2 text-center text-sm text-red-600">{error}</p>}
+          {error && (
+            <p className="mt-2 text-center text-sm text-red-600">{error}</p>
+          )}
         </CardContent>
       </Card>
       <div className="text-balance text-center text-xs text-muted-foreground [&_a]:underline [&_a]:underline-offset-4 [&_a]:hover:text-primary  ">
