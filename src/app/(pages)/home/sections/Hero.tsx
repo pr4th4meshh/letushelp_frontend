@@ -6,10 +6,12 @@ import VolunteeringOpportunitiesAvatar3 from "../../../../../public/3d_avatar_2.
 import VectorLines from "../../../../../public/hero-vector-lines.svg"
 import Image from "next/image"
 import SecondaryButton from "@/components/SecondaryButton"
+import HeroTestimoniaCard from "./HeroTestimoniaCard"
+import { HERO_TESTIMONIALS } from "@/utils/constants"
 
 const Hero = () => {
   return (
-    <div className="flex flex-col h-auto relative z-0 mb-[74px] md:px-0 px-[10px]">
+    <div className="flex flex-col overflow-hidden h-auto relative z-0 mb-[74px] md:px-0 px-[10px]">
       {/* Volunteering Opportunities Card */}
       <VolunteeringOpportunities
         images={[
@@ -24,6 +26,38 @@ const Hero = () => {
         Make a Difference, <br />
         One Hour at a Time.
       </h1>
+
+      <div className="lg:block hidden">
+        {/* Left Testimonial Cards */}
+        <div className="absolute left-[-10%] top-[28%] z-50 space-y-10">
+          {HERO_TESTIMONIALS.slice(0, 2).map((testimonial) => (
+            <HeroTestimoniaCard
+              key={testimonial.id}
+              index={testimonial.id}
+              feedback={testimonial.feedback}
+              name={testimonial.name}
+              title={testimonial.title}
+              rating={testimonial.rating}
+              avatar={testimonial.avatar}
+            />
+          ))}
+        </div>
+
+        {/* Right Testimonial Cards */}
+        <div className="absolute right-[-10%] top-[28%] z-50 space-y-10">
+          {HERO_TESTIMONIALS.slice(2).map((testimonial) => (
+            <HeroTestimoniaCard
+              key={testimonial.id}
+              index={testimonial.id}
+              feedback={testimonial.feedback}
+              name={testimonial.name}
+              title={testimonial.title}
+              rating={testimonial.rating}
+              avatar={testimonial.avatar}
+            />
+          ))}
+        </div>
+      </div>
 
       {/* Background Vector Lines */}
       <div className=" flex justify-center">
@@ -43,7 +77,7 @@ const Hero = () => {
       </p>
 
       {/* Action buttons */}
-      <div className="flex flex-row justify-center z-50 gap-[21px] pt-[32px]">
+      <div className="flex flex-row justify-center z-50 gap-[21px] pt-[32px] pb-[80px]">
         <SecondaryButton
           title="Find Opportunities"
           className="text-[14px] font-[600] leading-[100%] shadow-[0px_2px_4px_0px_rgba(136,_144,_194,_0.2),_0px_5px_15px_0px_rgba(37,_44,_97,_0.15)] bg-[#0984E3] hover:bg-[#2169a0] text-white transition-all duration-300 transform hover:translate-y-[-4px]"

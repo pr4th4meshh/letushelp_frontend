@@ -21,8 +21,8 @@ const Statistics = () => {
         </div>
 
         {/* Statistics Overlay */}
-        <div className="absolute bottom-[-150px] sm:bottom-[-60px] md:bottom-[-70px] left-0 right-0 flex justify-center px-4">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-[28px]">
+        <div className="absolute bottom-[-150px] sm:bottom-[-60px] md:bottom-[-70px] left-0 right-0 flex justify-center px-2 md:px-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-1 md:gap-[28px]">
             {STATISTICS_DATA.map((data, index) => (
               <StatisticCard
                 key={index}

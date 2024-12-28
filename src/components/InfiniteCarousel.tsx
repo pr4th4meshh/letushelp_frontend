@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from "react"
+import React from "react"
+import { motion } from "framer-motion"
 
 interface CarouselProps {
   children: React.ReactNode
@@ -6,36 +7,46 @@ interface CarouselProps {
   speed?: number
 }
 
-const InfiniteCarousel: React.FC<CarouselProps> = ({
-  children,
-  direction,
-  speed = 20,
-}) => {
-  const [trackWidth, setTrackWidth] = useState(0)
-  const trackRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    if (trackRef.current) {
-      setTrackWidth(trackRef.current.scrollWidth / 2)
-    }
-  }, [children])
-
-  const animationStyle = {
-    animationDuration: `${trackWidth / speed}s`,
+const InfiniteCarousel: React.FC<CarouselProps> = ({ children, direction }) => {
+  const carouselVariants = {
+    ltr: {
+      x: ["0%", "-50%"], // Move from 0% to -50% (LTR)
+      transition: {
+        x: {
+          repeat: Infinity,
+          repeatType: "loop",
+          duration: 40,
+          ease: "linear",
+        },
+      },
+    },
+    rtl: {
+      x: ["-50%", "0%"], // Move from -50% to 0% (RTL)
+      transition: {
+        x: {
+          repeat: Infinity,
+          repeatType: "loop",
+          duration: 40,
+          ease: "linear",
+        },
+      },
+    },
   }
 
   return (
-    <div className="carousel-container overflow-hidden">
-      <div
-        ref={trackRef}
-        className={`carousel-track flex ${
-          direction === "ltr" ? "animate-scroll-ltr" : "animate-scroll-rtl"
-        }`}
-        style={animationStyle}
+    <div
+      className="w-screen overflow-hidden"
+      style={{ width: "100%", overflow: "hidden" }}
+    >
+      <motion.div
+        className="carousel-track"
+        style={{ display: "flex", width: "max-content" }}
+        variants={carouselVariants}
+        animate={direction} // Directs to either 'ltr' or 'rtl'
       >
         {children}
         {children}
-      </div>
+      </motion.div>
     </div>
   )
 }

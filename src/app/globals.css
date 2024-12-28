@@ -2,68 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Carousel container */
-.carousel-container {
-  width: 100%;
-  overflow: hidden;
-}
-
-/* Carousel track */
-.carousel-track {
-  display: flex;
-  width: max-content;
-  animation-duration: 20s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-/* Carousel track children / item */
-.carousel-track > div {
-  flex-shrink: 0;
-  display: inline-block;
-}
-
-/* LTR animation */
-.ltr {
-  animation-name: scroll-ltr !important;
-}
-
-/* RTL animation */
-.rtl {
-  animation-name: scroll-rtl !important;
-}
-
-/* Animation utilities */
-@layer utilities {
-  .animate-scroll-ltr {
-    animation: scroll-ltr linear infinite;
-  }
-
-  .animate-scroll-rtl {
-    animation: scroll-rtl linear infinite;
-  }
-
-  /* Animation keyframes for Left to Right */
-  @keyframes scroll-ltr {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-
-  /* Animation keyframes for Right to Left */
-  @keyframes scroll-rtl {
-    0% {
-      transform: translateX(-50%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-}
-
 /* THESE ARE COMING FROM SHADCN*/
 @layer base {
   :root {

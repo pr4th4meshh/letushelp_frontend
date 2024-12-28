@@ -24,7 +24,7 @@ const CategoryCard = ({
   category: string
 }) => {
   return (
-    <div className="px-[10px] py-[5px] flex justify-center items-center gap-[10px] rounded-[60px] border-[3px] border-white shadow-[1px_2px_10px_0px_rgba(37, 44, 97, 0.25)]">
+    <div className="px-[10px] py-[5px] flex justify-center items-center gap-[10px] rounded-[60px] border-[3px] border-white shadow-[0px_2px_4px_0px_rgba(136,_144,_194,_0.2),_0px_5px_15px_0px_rgba(37,_44,_97,_0.15)]">
       <Image
         src={categoryIcon}
         alt="Category Icon"
