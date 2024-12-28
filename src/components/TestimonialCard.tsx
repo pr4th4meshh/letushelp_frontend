@@ -41,7 +41,7 @@ const TestimonialCard = ({
       </div>
 
       {/* Testimonial Card Content */}
-      <div className="bg-[#F2F4F6] border-[3px] border-white py-[20px] px-[12px] md:px-[24px] rounded-[24px] gap-[24px] max-w-[200px] md:max-w-[348px] popular-events-card-shadow">
+      <div className="bg-[#F2F4F6] border-[3px] border-white py-[20px] px-[12px] md:px-[24px] rounded-[24px] gap-[24px] max-w-[200px] md:max-w-[348px] shadow-[0px_2px_4px_0px_rgba(136,_144,_194,_0.2),_0px_5px_15px_0px_rgba(37,_44,_97,_0.15)]">
         {/* Testimonial Card Person Name */}
         <h3 className="text-[24px] font-[600] tracking-[0.5px] leading-normal text-start text-primary">
           {personName}

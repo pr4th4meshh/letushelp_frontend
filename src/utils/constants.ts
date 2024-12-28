@@ -141,7 +141,7 @@ export const POPULAR_EVENTS_CARD_DATA = [
     title: "Food Donation Event",
     description:
       "Spend 2 hours a week mentoring underprivileged children and help them achieve their dreams.",
-  }
+  },
 ]
 
 // TESTIMONIALS_DATA
@@ -181,5 +181,45 @@ export const TESTIMONIALS_DATA = [
     rating: 5,
     feedback:
       "Volunteering has been an incredibly rewarding experience. Working together as a team to make a real difference in our community is inspiring.",
+  },
+]
+
+// Hero Testimonials Data
+export const HERO_TESTIMONIALS = [
+  {
+    id: 1,
+    name: "Jane Doe",
+    title: "Volunteer",
+    feedback:
+      "Distributing food to families in need not only changed their lives but also changed mine. It was humbling to be part of a community that truly cares about helping others.",
+    rating: 5,
+    avatar: "/hero-testi-avatar-0.svg",
+  },
+  {
+    id: 2,
+    name: "John Smith",
+    title: "Environmental Advocate",
+    feedback:
+      "Spending time at the animal shelter, caring for and rescuing stray dogs, has brought so much joy into my life. The process was well-organized, and I can’t wait to continue making a difference.",
+    rating: 5,
+    avatar: "/hero-testi-avatar-1.svg",
+  },
+  {
+    id: 3,
+    name: "Ayesha K.",
+    title: "Environmental Enthusiast",
+    feedback:
+      "I joined the Clean Beaches Initiative, and it was amazing to see how a small group of people could make such a huge difference. I’ve learned so much about environmental conservation and met some incredible, like-minded people.",
+    rating: 4.5,
+    avatar: "/hero-testi-avatar-0.svg",
+  },
+  {
+    id: 4,
+    name: "John Davis",
+    title: "Volunteer for Education Initiatives",
+    feedback:
+      "Volunteering as a tutor has been one of the most fulfilling experiences of my life. Seeing the kids' faces light up when they understand a concept is priceless. This platform made it so easy to get involved and make an impact.",
+    rating: 4.5,
+    avatar: "/hero-testi-avatar-1.svg",
   },
 ]
